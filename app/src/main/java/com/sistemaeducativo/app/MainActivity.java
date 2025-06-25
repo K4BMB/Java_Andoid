@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         initializeViews();
         setupListeners();
-        
-        dataManager = DataManager.getInstance();
+
+        dataManager = DataManager.getInstance(this);
     }
 
     private void initializeViews() {
@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Usuario usuario = dataManager.authenticateUser(username, password);
-        
+
         if (usuario != null) {
             // Login exitoso
             Intent intent;
-            
+
             switch (usuario.getTipo()) {
                 case ESTUDIANTE:
                     intent = new Intent(this, EstudianteActivity.class);
@@ -73,14 +73,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Tipo de usuario no válido", Toast.LENGTH_SHORT).show();
                     return;
             }
-            
+
             intent.putExtra("usuario_id", usuario.getId());
             intent.putExtra("usuario_nombre", usuario.getNombre());
             intent.putExtra("usuario_tipo", usuario.getTipo().name());
-            
+
             startActivity(intent);
             finish(); // Cerrar la actividad de login
-            
+
         } else {
             Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
         }

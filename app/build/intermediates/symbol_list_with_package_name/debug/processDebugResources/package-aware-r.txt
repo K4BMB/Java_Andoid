@@ -3111,11 +3111,15 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAgregarUsuario
 id btnCerrarSesion
 id btnCrearCurso
+id btnEditarUsuario
 id btnEliminarCurso
+id btnEliminarUsuario
 id btnLogin
 id btnMatricularse
+id btnResetPassword
 id btnVerEstudiantes
 id buttonPanel
 id cache_measures
@@ -3198,8 +3202,10 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id etDescripcion
+id etNombre
 id etNombreCurso
 id etPassword
+id etUsername
 id etUsuario
 id exitUntilCollapsed
 id expand_activities_button
@@ -3432,6 +3438,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerTipo
 id spline
 id split_action_bar
 id spread
@@ -3501,8 +3508,10 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvDescripcionCurso
+id tvDetalleUsuario
 id tvEstudiantes
 id tvNombreCurso
+id tvNombreUsuario
 id tvProfesor
 id tvTotalCursos
 id tvTotalMatriculas
@@ -3664,9 +3673,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_usuario
 layout item_curso_disponible
 layout item_curso_profesor
 layout item_mi_curso
+layout item_usuario_admin
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

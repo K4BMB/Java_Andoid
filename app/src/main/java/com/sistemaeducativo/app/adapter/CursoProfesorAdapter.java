@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 import com.sistemaeducativo.app.R;
+import com.sistemaeducativo.app.data.DataManager;
 import com.sistemaeducativo.app.model.Curso;
 
 import java.util.List;
@@ -18,15 +19,18 @@ public class CursoProfesorAdapter extends RecyclerView.Adapter<CursoProfesorAdap
 
     private List<Curso> cursos;
     private OnCursoProfesorClickListener listener;
+    private DataManager dataManager;
 
     public interface OnCursoProfesorClickListener {
         void onVerEstudiantes(Curso curso);
+
         void onEliminarCurso(Curso curso);
     }
 
     public CursoProfesorAdapter(List<Curso> cursos, OnCursoProfesorClickListener listener) {
         this.cursos = cursos;
         this.listener = listener;
+        this.dataManager = DataManager.getInstance();
     }
 
     @NonNull
@@ -69,7 +73,10 @@ public class CursoProfesorAdapter extends RecyclerView.Adapter<CursoProfesorAdap
         void bind(Curso curso) {
             tvNombreCurso.setText(curso.getNombre());
             tvDescripcionCurso.setText(curso.getDescripcion());
-            tvEstudiantes.setText("Estudiantes: 0"); // Se actualizará con datos reales
+
+            // Contar estudiantes reales matriculados en este curso
+            int cantidadEstudiantes = dataManager.getEstudiantesByCurso(curso.getId()).size();
+            tvEstudiantes.setText("Estudiantes: " + cantidadEstudiantes);
 
             btnVerEstudiantes.setOnClickListener(v -> {
                 if (listener != null) {
