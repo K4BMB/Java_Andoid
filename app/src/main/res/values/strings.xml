@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Sistema Educativo</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login_button">Ingresar</string>
+    <string name="welcome">Bienvenido</string>
+
+    <!-- Estudiante -->
+    <string name="estudiante_title">Panel de Estudiante</string>
+    <string name="cursos_disponibles">Cursos Disponibles</string>
+    <string name="mis_cursos">Mis Cursos</string>
+    <string name="matricularse">Matricularse</string>
+
+    <!-- Profesor -->
+    <string name="profesor_title">Panel de Profesor</string>
+    <string name="agregar_curso">Agregar Curso</string>
+    <string name="mis_cursos_profesor">Mis Cursos</string>
+    <string name="ver_estudiantes">Ver Estudiantes</string>
+    <string name="nombre_curso">Nombre del Curso</string>
+    <string name="descripcion">Descripción</string>
+    <string name="crear_curso">Crear Curso</string>
+
+    <!-- Admin -->
+    <string name="admin_title">Panel de Administrador</string>
+    <string name="gestionar_usuarios">Gestionar Usuarios</string>
+    <string name="gestionar_cursos">Gestionar Cursos</string>
+    <string name="reportes">Reportes</string>
+
+    <!-- General -->
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+</resources>

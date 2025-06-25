@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+   Describe the contents of the application's data directory that will be
+   backed up.  See https://developer.android.com/guide/topics/data/autobackup
+   for more details.
+    -->
+</full-backup-content>
